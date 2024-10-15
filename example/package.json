@@ -1,0 +1,16 @@
+{
+  "name": "posthog-trpc-example",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@trpc/server": "^10.45.2",
+    "typescript": "^5.6.3",
+    "posthog-trpc": "^0.1.0"
+  },
+  "author": "arjovanramshorst",
+  "license": "ISC",
+  "description": ""
+}
