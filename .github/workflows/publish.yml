@@ -1,5 +1,7 @@
 name: Publish package on npm
 on:
+  release:
+    types: [published]
   workflow_dispatch:
     inputs:
       release_type:
@@ -29,11 +31,11 @@ jobs:
         id: version
         run: |
           if [[ ${{ github.event.inputs.release_type }} == "major" ]]; then
-            echo "VERSION=$(npm version major)" >> $GITHUB_ENV
+            echo "VERSION=$(npm --no-git-tag-version version major)" >> $GITHUB_ENV
           elif [[ ${{ github.event.inputs.release_type }} == "minor" ]]; then
-            echo "VERSION=$(npm version minor)" >> $GITHUB_ENV
+            echo "VERSION=$(npm --no-git-tag-version version minor)" >> $GITHUB_ENV
           else
-            echo "VERSION=$(npm version patch)" >> $GITHUB_ENV
+            echo "VERSION=$(npm --no-git-tag-version version patch)" >> $GITHUB_ENV
           fi
       - name: install
         run: yarn
@@ -67,7 +69,7 @@ jobs:
 
           # The message for the commit.
           # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: "CI | Publish package:${{ env.VERSION }}"
+          message: "[ci] Publish posthog-trpc:${{ env.VERSION }}"
 
           # Arguments for the git tag command (the tag name always needs to be the first word not preceded by an hyphen)
           # Default: ''
