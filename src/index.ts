@@ -24,7 +24,9 @@ export type PosthogMiddlewareConfig<TParams extends ProcedureParams> = {
    * Get other props you want to add to the event from the provided context.
    * @param ctx
    */
-  getPropsFromContext?: (ctx: TParams['_ctx_out']) => Record<string, string>;
+  getPropsFromContext?: (
+    ctx: TParams['_ctx_out']
+  ) => Record<string, string | boolean | Date>;
 
   /**
    * Also send events for queries. Defaults to false.
