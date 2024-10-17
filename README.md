@@ -1,5 +1,10 @@
 # posthog-trpc
 
+![NPM License](https://img.shields.io/npm/l/posthog-trpc)
+![NPM Version](https://img.shields.io/npm/v/posthog-trpc)
+![NPM Downloads](https://img.shields.io/npm/dw/posthog-trpc)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/arjovanramshorst/posthog-trpc/main.yml)
+
 This library can be used to easily connect your trpc backend to PostHog.
 
 ## TL;DR
