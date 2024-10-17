@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1729152124135" clover="3.2.0">
+  <project timestamp="1729152124136" name="All files">
+    <metrics statements="59" coveredstatements="53" conditionals="29" coveredconditionals="24" methods="20" coveredmethods="18" elements="108" coveredelements="95" complexity="0" loc="59" ncloc="59" packages="2" files="3" classes="3"/>
+    <package name="src">
+      <metrics statements="51" coveredstatements="45" conditionals="29" coveredconditionals="24" methods="19" coveredmethods="17"/>
+      <file name="index.ts" path="/home/runner/work/posthog-trpc/posthog-trpc/src/index.ts">
+        <metrics statements="33" coveredstatements="30" conditionals="23" coveredconditionals="19" methods="10" coveredmethods="9"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="92" count="4" type="stmt"/>
+        <line num="104" count="1" type="stmt"/>
+        <line num="107" count="7" type="stmt"/>
+        <line num="110" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="113" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="116" count="1" type="stmt"/>
+        <line num="119" count="6" type="stmt"/>
+        <line num="121" count="6" type="stmt"/>
+        <line num="122" count="8" type="stmt"/>
+        <line num="123" count="8" type="stmt"/>
+        <line num="125" count="8" type="cond" truecount="0" falsecount="1"/>
+        <line num="127" count="0" type="stmt"/>
+        <line num="130" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="132" count="1" type="stmt"/>
+        <line num="135" count="7" type="cond" truecount="0" falsecount="1"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="140" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="141" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="142" count="1" type="stmt"/>
+        <line num="146" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="147" count="10" type="stmt"/>
+        <line num="154" count="10" type="stmt"/>
+        <line num="156" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="160" count="6" type="stmt"/>
+        <line num="169" count="6" type="stmt"/>
+        <line num="171" count="6" type="stmt"/>
+      </file>
+      <file name="utils.ts" path="/home/runner/work/posthog-trpc/posthog-trpc/src/utils.ts">
+        <metrics statements="18" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="9" coveredmethods="8"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="14" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="10" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+        <line num="39" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="test">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="test.env.ts" path="/home/runner/work/posthog-trpc/posthog-trpc/test/test.env.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
