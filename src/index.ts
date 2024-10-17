@@ -11,7 +11,7 @@ export type PosthogMiddlewareConfig<TParams extends ProcedureParams> = {
   /**
    * PostHog client
    */
-  client: Pick<PostHog, 'capture'>;
+  client: Pick<PostHog, 'capture'> | undefined;
 
   /**
    * Function that gets the distinct id from the context. If it returns undefined,
@@ -109,6 +109,12 @@ export const posthogMiddleware = <TParams extends ProcedureParams>(
     getEventName: (params) =>
       `${params.type === 'mutation' ? 'mutate' : params.type}:${params.path}`,
   };
+
+  if (!config.client) {
+    // Disable when client is undefined, makes it easier to condionally use this
+    // middleware based on whether or not you have PostHog configured.
+    return ({ next }) => next();
+  }
 
   const mergedConfig = { ...defaultConfig, ...config };
 

@@ -12,7 +12,7 @@ const defaultConfig = {
   getDistinctId: (ctx: TestContext) => ctx.username,
 };
 
-describe('Parsing the meta data', () => {
+describe('Using posthog-trpc', () => {
   beforeEach(() => {
     posthog.capture.mockClear();
   });
@@ -62,6 +62,19 @@ describe('Parsing the meta data', () => {
         distinctId: 'arjo',
         properties: {},
       });
+    });
+    it('should ignore requests when PostHog client is undefined', async () => {
+      const { router, procedure, build } = buildTestContext({
+        ...defaultConfig,
+        client: undefined,
+      });
+      const api = build(
+        router({
+          test: procedure.mutation(async () => {}),
+        })
+      );
+      await api({ username: 'arjo' }).test();
+      expect(posthog.capture).not.toHaveBeenCalled();
     });
   });
   describe('using metadata', () => {
