@@ -26,7 +26,7 @@ export type PosthogMiddlewareConfig<TParams extends ProcedureParams> = {
    */
   getPropsFromContext?: (
     ctx: TParams['_ctx_out']
-  ) => Record<string, string | boolean | Date>;
+  ) => Record<string, string | boolean | Date | undefined | null>;
 
   /**
    * Also send events for queries. Defaults to false.
