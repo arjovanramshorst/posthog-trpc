@@ -8,6 +8,11 @@
 This library can be used to easily connect your trpc backend to PostHog.
 
 ## TL;DR
+
+```sh
+npm install --save posthog-trpc
+```
+
 ```typescript
 import { initTRPC } from '@trpc/server';
 import { PostHog } from "posthog-node";
